@@ -1,0 +1,1 @@
+snmpenum <ip> <community> [windows.txt , linux.txt]
